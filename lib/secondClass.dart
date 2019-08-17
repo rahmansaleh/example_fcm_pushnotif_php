@@ -8,7 +8,9 @@ class SecondClassLess extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SecondClassFul();
+    return SecondClassFul(
+      payload: payload,
+    );
   }
 }
 
@@ -19,7 +21,9 @@ class SecondClassFul extends StatefulWidget {
   SecondClassFul({this.payload});
 
   @override
-  _SecondClassFulState createState() => _SecondClassFulState();
+  _SecondClassFulState createState() => _SecondClassFulState(
+    payload: payload
+  );
 }
 
 class _SecondClassFulState extends State<SecondClassFul> {
